@@ -1,2 +1,2 @@
-# Programs that were compiled in lab.
-# Software used: CodeBlocks for Compiling & Running the Programs.
+# Not all but most of the programs that were compiled in lab.
+# ADASDAADAD
