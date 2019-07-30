@@ -1,45 +1,67 @@
+//Program to add two complex numbers using friend function
+
 #include<iostream>
+
 using namespace std;
 
-class Complex
+class complex
+
 {
-        int num1, num2;
-    public:
-        void accept()
-        {
-                cout<<"\n Enter Two Complex Numbers : ";
-                cin>>num1>>num2;
-        }
-        Complex operator+(Complex obj)   //Overloading '+' operator
-        {
-                Complex c;
-                c.num1=num1+obj.num1;
-                c.num2=num2+obj.num2;
-                return(c);
-        }
-        void display()
-        {
-                cout<<num1<<"+"<<num2<<"i"<<"\n";
-        }
+
+int real,imag;
+
+public:
+
+void set()
+
+{
+cout<<"\nEnter Real & Imag Part: ";
+
+cin>>real>>imag;
+
+}
+
+friend complex sum(complex,complex);
+
+void display();
+
 };
+
+void complex::display()
+
+{
+cout<<"\nThe sum of complex num is: "<<real<<"+"<<imag<<"i";
+
+}
+
+complex sum(complex a,complex b)
+
+{
+
+complex t;
+
+t.real=a.real+b.real;
+
+t.imag=a.imag+b.imag;
+
+return t;
+
+}
+
 int main()
-{cout<<"Made By Rishu Sinha, 41014202017\n\n";
-        Complex c1, c2, sum;      //Created Object of Class Complex i.e c1 and c2
 
-        c1.accept();  //Accepting the values
-        c2.accept();
+{
+cout<< "Made by Rishu Sinha, 41014202017\n";
+complex a,b,c;
 
-        sum = c1+c2;   //Addition of object
+a.set();
 
-        cout<<"\n Entered Values : \n";
-        cout<<"\t";
-        c1.display();    //Displaying user input values
-        cout<<"\t";
-        c2.display();
+b.set();
 
-        cout<<"\n Addition of Real and Imaginary Numbers : \n";
-        cout<<"\t";
-        sum.display();  //Displaying the addition of real and imaginary numbers
+c=sum(a,b);
 
-        return 0;
+c.display();
+
+return(0);
+
 }
