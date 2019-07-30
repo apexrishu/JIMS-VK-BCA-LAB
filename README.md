@@ -1,9 +1,6 @@
-#H1 My JIMS C++ Programs
-<summary>
+# My JIMS C++ Programs
   It contains most of the programs that were compiled and run in jims,vk lab.
-  </summary>
   
-Requirements
-<summary>
-  Codeblocks software was used to for compilinig and running the programs. Download [Here] (http://www.codeblocks.org/downloads/26)
-  </summary>
+# Requirements
+  Codeblocks software was used to for compilinig and running the programs. Download [Here](http://www.codeblocks.org/downloads/26).
+ 
